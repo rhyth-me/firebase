@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "score-market"
+  },
+  "targets": {
+    "score-market": {
+      "storage": {
+        "temporary": [
+          "score-market.appspot.com"
+        ],
+        "image": [
+          "rhythme-image"
+        ]
+      }
+    }
+  }
+}

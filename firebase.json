@@ -1,0 +1,12 @@
+{
+  "storage": [
+    {
+      "target": "temporary",
+      "rules": "storage/temporary.rules"
+    },
+    {
+      "target": "image",
+      "rules": "storage/image.rules"
+    }
+  ]
+}

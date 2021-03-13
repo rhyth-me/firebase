@@ -1,0 +1,13 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /profile/{hash} {
+      allow create: if request.auth != null;
+
+      allow create: if hash.size() == 64;
+      allow create: if request.resource.size < 1 * 1024 * 1024;
+      allow create: if request.resource.contentType == 'image/png';
+      allow create: if request.resource.contentType == 'image/jpeg';
+    }
+  }
+}
