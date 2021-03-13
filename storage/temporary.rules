@@ -1,7 +1,7 @@
 rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
-    match /profile/{hash} {
+    match /image/{hash} {
       allow create: if request.auth != null;
 
       allow create: if hash.size() == 64;
